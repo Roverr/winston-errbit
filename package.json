@@ -1,6 +1,6 @@
 {
   "name": "winston-errbit-v2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Errbit transporter for winston. Using v2 API.",
   "main": "index.js",
   "scripts": {
