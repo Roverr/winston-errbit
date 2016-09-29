@@ -20,6 +20,9 @@ util.inherits(ErrbitLogger, winston.Transport);
 
 ErrbitLogger.prototype.log = function (level, msg, meta, callback) {
   var error = new Error(msg);
+  if (meta.message && meta.stack && (!msg || msg === '')) {
+    error = meta;
+  }
   error.type = level;
   if (meta) {
     error.stack = meta.stack || "";
